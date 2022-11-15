@@ -1,3 +1,6 @@
+% this is NOT the main analysis script.
+% If you wanted the main analysis script, please use analyseMe.m
+
 %% switch
 
 switch upper(loadSettings)
