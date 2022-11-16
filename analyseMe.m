@@ -14,10 +14,13 @@ addpath(genpath(pathToLibrary));
 %% user setting
 clear loadSettings lSkip kPath;
 % please check chooseSettings.m
-loadSettings="ISO2,PROT,PRE2";
+mySettings="ISO2,PROT,PRE2";
 lSkip=false; % DDS summary file: skip first 2 lines (in addition to header line)
 kPath="P:\Accelerating-System\Accelerator-data";
 
 %% actually do the job
-run("chooseSettings.m");
-run("externals\MatLabTools\DisplayBeamProfiles.m");
+for iLoad=1:length(mySettings)
+    loadSettings=mySettings(iLoad);
+    run("chooseSettings.m");
+    run("externals\MatLabTools\DisplayBeamProfiles.m");
+end
