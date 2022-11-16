@@ -1,5 +1,5 @@
 % this is NOT the main analysis script.
-% If you wanted the main analysis script, please use analyseMe.m
+% If you wanted the main analysis script, please use showData.m
 
 %% switch
 
