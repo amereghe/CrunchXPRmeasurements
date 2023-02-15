@@ -14,9 +14,9 @@ addpath(genpath(pathToLibrary));
 %% user setting
 clear loadSettings lSkip kPath;
 % please check chooseSettings.m
-mySettings="ISO2,PROT,PRE2";
+mySettings="ISO3,PROT,DDS";
 lSkip=false; % DDS summary file: skip first 2 lines (in addition to header line)
-kPath="P:\Accelerating-System\Accelerator-data";
+kPath="P:\Accelerating-System\Accelerator-data"; % needed by chooseSettings.m
 
 %% actually do the job
 for iLoad=1:length(mySettings)

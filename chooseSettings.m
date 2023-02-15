@@ -1,5 +1,5 @@
 % this is NOT the main analysis script.
-% If you wanted the main analysis script, please use analyseMe.m
+% If you wanted the main analysis script, please use showData.m
 
 %% switch
 
@@ -12,7 +12,7 @@ switch upper(loadSettings)
     % ---------------------------------------------------------------------
     % overview of a specific data taking
     % ---------------------------------------------------------------------
-    case "ISO2,CARB,PRE"
+    case "ISO2,CARB,PRE(2022-10-26)"
         myTit="Steering ISO2 (2022-10-26) - Carbonio";
         monTypes=["CAM" "DDS" "SFP"];
         MonPaths=[...
@@ -21,7 +21,7 @@ switch upper(loadSettings)
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.10.26\PRC-544-*-SFP\") 
             ];
         myLabels=["CAM" "DDS" "SFP"];
-    case "ISO2,CARB,POST"
+    case "ISO2,CARB,POST(2022-11-01)"
         myTit="Steering ISO2 (2022-11-01) - Carbonio";
         monTypes=["CAM" "DDS" "SFP"];
         MonPaths=[...
@@ -30,7 +30,7 @@ switch upper(loadSettings)
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.11.01\PRC-544-*-SFP\") 
             ];
         myLabels=["CAM" "DDS" "SFP"];
-    case "ISO2,PROT,PRE1"
+    case "ISO2,PROT,PRE(2022-10-27)"
         myTit="Steering ISO2 (2022-10-27) - Protoni";
         monTypes=["CAM" "DDS" "SFP"];
         MonPaths=[...
@@ -39,7 +39,7 @@ switch upper(loadSettings)
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.10.27\PRC-544-*-SFP\") 
             ];
         myLabels=["CAM" "DDS" "SFP"];
-    case "ISO2,PROT,PRE2"
+    case "ISO2,PROT,PRE(2022-11-01)"
         myTit="Steering ISO2 (2022-11-01) - Protoni";
         monTypes=["CAM" "DDS" "SFP"];
         MonPaths=[...
@@ -110,7 +110,7 @@ switch upper(loadSettings)
     % ---------------------------------------------------------------------
     % overview of a specific data taking
     % ---------------------------------------------------------------------
-    case "ISO3,CARB"
+    case "ISO3,CARB(2022-10-24)"
         myTit="Steering ISO3 (2022-10-24) - Carbonio";
         monTypes=["CAM" "DDS" "SFP"];
         MonPaths=[...
@@ -119,7 +119,7 @@ switch upper(loadSettings)
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.24\PRC-544-*-SFP\") 
             ];
         myLabels=["CAM" "DDS" "SFP"];
-    case "ISO3,PROT"
+    case "ISO3,PROT(2022-10-24)"
         myTit="Steering ISO3 (2022-10-24) - Protoni";
         monTypes=["CAM" "DDS" "SFP"];
         MonPaths=[...
@@ -128,6 +128,14 @@ switch upper(loadSettings)
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\2022.10.24\PRC-544-*-SFP\") 
             ];
         myLabels=["CAM" "DDS" "SFP"];
+    case "ISO3,PROT(2023-02-15)"
+        myTit="Steering ISO3 (2023-02-15) - Protoni";
+        monTypes=["CAM" "DDS"];
+        MonPaths=[...
+            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\15-02-2023\ProtSO1_*\") 
+            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\15-02-2023\PRC-544-*\") 
+            ];
+        myLabels=["CAM" "DDS"];
         
     % ---------------------------------------------------------------------
     % specific checks
@@ -185,6 +193,7 @@ switch upper(loadSettings)
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\2022.10.08\pre-steering\ProtSO1_*\") 
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\2022.10.08\post-steering\ProtSO1_*\") 
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\2022.10.24\ProtSO1_*\") 
+            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\15-02-2023\ProtSO1_*\") 
             ];
         myLabels=[...
             "2021-10-18 - Machine photo (RP data tacking) - err: ISO4 cyCodes!"
@@ -194,6 +203,7 @@ switch upper(loadSettings)
             "2022-10-08 - pre-steering - err: N/A"
             "2022-10-08 - post-steering - err: N/A"
             "2022-10-24 - check"
+            "2023-02-15 - pre-steering"
             ];
     case "ISO3,PROT,DDS"
         myTit="Steering ISO3 - Protoni - DDS";
@@ -206,6 +216,7 @@ switch upper(loadSettings)
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\2022.10.08\pre-steering\PRC-544-*-DDSF\") 
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\2022.10.08\post-steering\PRC-544-*-DDSF\") 
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\2022.10.24\PRC-544-*-DDSF\") 
+            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\15-02-2023\PRC-544-*\") 
             ];
         myLabels=[...
             "2021-10-18 - Machine photo (RP data tacking) - err: ISO4 cyCodes!"
@@ -215,6 +226,7 @@ switch upper(loadSettings)
             "2022-10-08 - pre-steering - err: N/A"
             "2022-10-08 - post-steering - err: N/A"
             "2022-10-24 - check"
+            "2023-02-15 - pre-steering" 
             ];
         
     % =====================================================================
