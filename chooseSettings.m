@@ -484,7 +484,47 @@ switch upper(loadSettings)
             ];
         
     % =====================================================================
-    % error
+	% %%%%%%%%%%%%%%%%%%%%%%%%% SFP CABLING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % =====================================================================
+
+    % ---------------------------------------------------------------------
+    % HE-010B-QPP and HE-012B-SFP, HE-007A-CEB kicking
+    % ---------------------------------------------------------------------
+    case "HE-007A-CEB,HOR,PROT,320MM"
+        myTit="Check fibre - Protoni, 320mm";
+        monTypes=[ "QPP" "QPP" "SFP" "SFP" ]; % CAM, DDS, GIM, QPP/SFH/SFM/SFP - QBM/PMM/PIB to come
+        MonPaths=[...
+            "S:\Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-007A-CEB\HE_010B_QPP\HOR\PRC-544-230205-0646\"
+            "S:\Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-007A-CEB\HE_010B_QPP\HOR\PRC-544-230205-0729\"
+            "S:\Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-007A-CEB\HE_012B_SFP\HOR\PRC-544-230205-0742\"
+            "S:\Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-007A-CEB\HE_012B_SFP\HOR\PRC-544-230205-0747\"
+        ];
+        myLabels=[...
+            "HE-010B-QPP - prima di invertire i cavi"
+            "HE-010B-QPP - dopo aver invertito i cavi"
+            "HE-012B-SFP - prima di invertire i cavi"
+            "HE-012B-SFP - dopo aver invertito i cavi"
+        ];
+       
+    % ---------------------------------------------------------------------
+    % HE-010B-QPP and HE-012B-SFP, HE-027A-CEB kicking
+    % ---------------------------------------------------------------------
+    case "HE-027A-CEB,HOR+VER,PROT,320MM"
+        myTit="Check fibre - Protoni, 320mm";
+        monTypes=[ "SFP" "SFP" "SFP" ]; % CAM, DDS, GIM, QPP/SFH/SFM/SFP - QBM/PMM/PIB to come
+        MonPaths=[...
+            "S:\Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-027A-CEB\HE_030B_SFP\HOR\PRC-544-230205-0756\"
+            "S:\Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-027A-CEB\HE_030B_SFP\HOR\PRC-544-230205-0800\"
+            "S:\Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-027A-CEB\HE_030B_SFP\VER\PRC-544-230205-0805\"
+        ];
+        myLabels=[...
+            "HE-030B-SFP - prima di invertire i cavi"
+            "HE-030B-SFP - dopo aver invertito i cavi"
+            "HE-030B-SFP - dopo aver invertito i cavi - VER SCAN"
+        ];
+        
+    % =====================================================================
+	% %%%%%%%%%%%%%%%%%%%%%%%%%    ERROR    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % =====================================================================
     
     otherwise
