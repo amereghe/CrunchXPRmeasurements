@@ -373,6 +373,15 @@ switch upper(loadSettings)
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.24\PRC-544-*-SFP\") 
             ];
         myLabels=["CAM" "DDS" "SFP"];
+    case "ISO3,CARB(2023-03-09)"
+        myTit="Steering ISO3 (2023-03-09) - Carbonio";
+        monTypes=["CAM" "DDS" "SFP"];
+        MonPaths=[...
+            "P:\Accelerating-System\Accelerator-data\scambio\MGP\steering XPR-3-Carbonio-9Mar2023\CarbSO2_LineX3_Size6_09-03-2023_0355\"
+            "P:\Accelerating-System\Accelerator-data\scambio\MGP\steering XPR-3-Carbonio-9Mar2023\PRC-544-230309-0354\"
+            "P:\Accelerating-System\Accelerator-data\scambio\MGP\steering XPR-3-Carbonio-9Mar2023\PRC-544-230309-0344\"
+            ];
+        myLabels=["CAM" "DDS" "SFP"];
     case "ISO3,PROT(2022-10-24)"
         myTit="Steering ISO3 (2022-10-24) - Protoni";
         monTypes=["CAM" "DDS" "SFP"];
@@ -405,6 +414,7 @@ switch upper(loadSettings)
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.08\pre-steering\CarbSO2_*\") 
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.08\post-steering\CarbSO2_*\") 
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.24\CarbSO2_*\") 
+            "P:\Accelerating-System\Accelerator-data\scambio\MGP\steering XPR-3-Carbonio-9Mar2023\CarbSO2_LineX3_Size6_09-03-2023_0355\"
             ];
         myLabels=[...
             "2021-10-18 - Machine photo (RP data tacking) - err: ISO4 cyCodes!"
@@ -414,6 +424,7 @@ switch upper(loadSettings)
             "2022-10-08 - pre-steering - err: N/A"
             "2022-10-08 - post-steering - err: N/A"
             "2022-10-24 - check"
+            "2023-03-09 - pre-steering"
             ];
     case "ISO3,CARB,DDS"
         myTit="Steering ISO3 - Carbonio - DDS";
@@ -426,6 +437,7 @@ switch upper(loadSettings)
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.08\pre-steering\PRC-544-*-DDSF\") 
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.08\post-steering\PRC-544-*-DDSF\") 
             strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.24\PRC-544-*-DDSF\") 
+            "P:\Accelerating-System\Accelerator-data\scambio\MGP\steering XPR-3-Carbonio-9Mar2023\PRC-544-230309-0354\"
             ];
         myLabels=[...
             "2021-10-18 - Machine photo (RP data tacking) - err: ISO4 cyCodes!"
@@ -435,6 +447,28 @@ switch upper(loadSettings)
             "2022-10-08 - pre-steering - err: N/A"
             "2022-10-08 - post-steering - err: N/A"
             "2022-10-24 - check"
+            "2023-03-09 - pre-steering"
+            ];
+    case "ISO3,CARB,SFP"
+        myTit="Steering ISO3 - Carbonio - SFP";
+        monTypes="SFP";
+        MonPaths=[...
+            strcat(kPath,"\Area dati MD\00XPR\Recommissioning_with_beam_for_RP\2021-10-18\machine_photo_C_ISO3\PRC-544-*-SFP\") 
+            strcat(kPath,"\Area dati MD\00XPR\Recommissioning_with_beam_for_RP\2022-03-09\machine_photo_C_ISO3\PRC-544-*-SFP\") 
+            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.09.13\PRC-544-*-SFP\") 
+            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.09.13\post-steering\PRC-544-*-SFP\") 
+            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.08\pre-steering\PRC-544-*-SFP\") 
+            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.24\PRC-544-*-SFP\") 
+            "P:\Accelerating-System\Accelerator-data\scambio\MGP\steering XPR-3-Carbonio-9Mar2023\PRC-544-230309-0344\"
+            ];
+        myLabels=[...
+            "2021-10-18 - Machine photo (RP data tacking) - err: ISO4 cyCodes!"
+            "2022-03-09 - Machine photo (RP data tacking)"
+            "2022-09-13 - pre-steering" 
+            "2022-09-13 - post-steering"
+            "2022-10-08 - pre-steering - err: N/A"
+            "2022-10-24 - check"
+            "2023-03-09 - pre-steering"
             ];
     case "ISO3,PROT,CAM"
         myTit="Steering ISO3 - Protoni - CAMeretta";
