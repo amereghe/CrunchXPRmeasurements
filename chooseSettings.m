@@ -1,6 +1,12 @@
 % this is NOT the main analysis script.
 % If you wanted the main analysis script, please use showData.m
 
+% acquire DB of measurements
+MeasDB = readtable("MeasDB.csv","Delimiter",";","MissingRule","omitrow");
+
+% clear descriptors
+clear myTit caseIDs monTypes MonPaths myLabels shifts;
+
 %% switch
 
 switch upper(loadSettings)
@@ -13,40 +19,23 @@ switch upper(loadSettings)
     % =====================================================================
     case "XPR3,C270,HE-025A-QUE,SOLUTION"
         myTit="XPR3, C270mm, HE-025A-QUE scan (2022-10-08 vs 2023-02-26) - Role of HV";
-        monTypes=["CAM" "CAM"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-025A-QUE\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run7CamNoHV\CarbSO2_*\"
+        caseIDs=[ 
+            find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                  strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                  strcmpi(MeasDB.LABEL,"Rough_Scan")       & contains(upper(MeasDB.MONITOR),"CAM") )
+            find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                  strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                  strcmpi(MeasDB.LABEL,"CAM XPR, no HV")   & contains(upper(MeasDB.MONITOR),"CAM") )
             ];
-        myLabels=[
-            "ref (2022-10-08)"
-            "CAM XPR (2023-02-26) - NO HV"
-            ];
+        myLabels=MeasDB.LABEL(caseIDs)';
         shifts=[0 2];
 
     case "XPR3,C270,HE-025A-QUE,SOLUTION(ALL)"
         myTit="XPR3, C270mm, HE-025A-QUE scan (2022-10-08 vs 2023-02-26) - CAMeretta only";
-        monTypes=["CAM" "CAM" "CAM" "CAM" "CAM" "CAM" "CAM" "CAM"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-025A-QUE\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run1CamXPR\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run2CamXPR\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run3CamOldRev\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run4CamOldRev\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run5CamOld\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run6CamOld\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run7CamNoHV\CarbSO2_*\"
-            ];
-        myLabels=[
-            "ref (2022-10-08)"
-            "CAM XPR (2023-02-26) - 1"
-            "CAM XPR (2023-02-26) - 2"
-            "CAM OP rotated (2023-02-26) - 1"
-            "CAM OP rotated (2023-02-26) - 2"
-            "CAM OP (2023-02-26) - 1"
-            "CAM OP (2023-02-26) - 2"
-            "CAM XPR (2023-02-26) - NO HV"
-            ];
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                      contains(upper(MeasDB.MONITOR),"CAM") );
+        myLabels=MeasDB.LABEL(caseIDs)';
         shifts=[0 2 2 2 2 2 2 2 2];
 
     % =====================================================================
@@ -60,39 +49,27 @@ switch upper(loadSettings)
     % ---------------------------------------------------------------------
     case "XPR3,C270,HE-025A-QUE(2022-10-08)"
         myTit="XPR3, C270mm, HE-025A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-025A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-025A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
     case "XPR3,C270,HE-023A-QUE(2022-10-08)"
         myTit="XPR3, C270mm, HE-023A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-023A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-023A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-023A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
     case "XPR3,C270,HE-020A-QUE(2022-10-08)"
         myTit="XPR3, C270mm, HE-020A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-020A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-020A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-020A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
     case "XPR3,C270,HE-018A-QUE(2022-10-08)"
         myTit="XPR3, C270mm, HE-018A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-018A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-018A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-018A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
 
     % ---------------------------------------------------------------------
@@ -100,39 +77,27 @@ switch upper(loadSettings)
     % ---------------------------------------------------------------------
     case "XPR3,C150,HE-025A-QUE(2022-10-08)"
         myTit="XPR3, C150mm, HE-025A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-025A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-025A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_150") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
     case "XPR3,C150,HE-023A-QUE(2022-10-08)"
         myTit="XPR3, C150mm, HE-023A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-023A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-023A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_150") & strcmpi(MeasDB.CONFIG,"SCAN_HE-023A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
     case "XPR3,C150,HE-020A-QUE(2022-10-08)"
         myTit="XPR3, C150mm, HE-020A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-020A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-020A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_150") & strcmpi(MeasDB.CONFIG,"SCAN_HE-020A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
     case "XPR3,C150,HE-018A-QUE(2022-10-08)"
         myTit="XPR3, C150mm, HE-018A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-018A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-018A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_150") & strcmpi(MeasDB.CONFIG,"SCAN_HE-018A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
 
     % ---------------------------------------------------------------------
@@ -140,48 +105,33 @@ switch upper(loadSettings)
     % ---------------------------------------------------------------------
     case "XPR3,C030,HE-025A-QUE(2022-10-08)"
         myTit="XPR3, C030mm, HE-025A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-025A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-025A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_030") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[0 0];
     case "XPR3,C030,HE-023A-QUE(2022-10-08)"
         myTit="XPR3, C030mm, HE-023A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-023A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-023A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_030") & strcmpi(MeasDB.CONFIG,"SCAN_HE-023A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
     case "XPR3,C030,HE-020A-QUE(2022-10-08)"
         myTit="XPR3, C030mm, HE-020A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-020A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-020A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_030") & strcmpi(MeasDB.CONFIG,"SCAN_HE-020A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
     case "XPR3,C030,HE-018A-QUE(2022-10-08)"
         myTit="XPR3, C030mm, HE-018A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-018A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-018A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_030") & strcmpi(MeasDB.CONFIG,"SCAN_HE-018A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
     case "XPR3,C030,H2-022A-QUE(2022-10-08)"
         myTit="XPR3, C030mm, H2-022A-QUE scan (2022-10-08)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\H2-022A-QUE\CarbSO2_*\"
-            "P:\Accelerating-System\Accelerator-data\Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\H2-022A-QUE\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_030") & strcmpi(MeasDB.CONFIG,"SCAN_H2-022A-QUE") & ...
+                      MeasDB.DATE=="08/10/2022" );
         shifts=[1 0];
 
     % =====================================================================
@@ -195,66 +145,44 @@ switch upper(loadSettings)
     % ---------------------------------------------------------------------
     case "XPR3,C270,HE-025A-QUE,RUN1_CAMXPR(2023-02-26,DONETTI)"
         myTit="XPR3, C270mm, HE-025A-QUE scan, Run1CamXPR (2023-02-26,Donetti)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run1CamXPR\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run1CamXPR\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                      strcmpi(MeasDB.LABEL,"CAM XPR, Run1")    );
         shifts=[1 0];
     case "XPR3,C270,HE-025A-QUE,RUN2_CAMXPR(2023-02-26,DONETTI)"
         myTit="XPR3, C270mm, HE-025A-QUE scan, Run2CamXPR (2023-02-26,Donetti)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run2CamXPR\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run2CamXPR\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                      strcmpi(MeasDB.LABEL,"CAM XPR, Run2")    );
         shifts=[1 0];
     case "XPR3,C270,HE-025A-QUE,RUN3_CAMOLD_REV(2023-02-26,DONETTI)"
         myTit="XPR3, C270mm, HE-025A-QUE scan, Run3CamOldRev (2023-02-26,Donetti)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run3CamOldRev\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run3CamOldRev\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                      strcmpi(MeasDB.LABEL,"CAM OP, Rotated, Run1")    );
         shifts=[1 0];
     case "XPR3,C270,HE-025A-QUE,RUN4_CAMOLD_REV(2023-02-26,DONETTI)"
         myTit="XPR3, C270mm, HE-025A-QUE scan, Run4CamOldRev (2023-02-26,Donetti)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run4CamOldRev\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run4CamOldRev\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                      strcmpi(MeasDB.LABEL,"CAM OP, Rotated, Run2")    );
         shifts=[1 0];
     case "XPR3,C270,HE-025A-QUE,RUN5_CAMOLD(2023-02-26,DONETTI)"
         myTit="XPR3, C270mm, HE-025A-QUE scan, Run5CamOld (2023-02-26,Donetti)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run5CamOld\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run5CamOld\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                      strcmpi(MeasDB.LABEL,"CAM OP, Run1")    );
         shifts=[1 0];
     case "XPR3,C270,HE-025A-QUE,RUN6_CAMOLD(2023-02-26,DONETTI)"
-        myTit="XPR3, C270mm, HE-025A-QUE scan, Run6CamOld (2023-02-26,Donetti)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run6CamOld\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run6CamOld\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                      strcmpi(MeasDB.LABEL,"CAM OP, Run2")    );
         shifts=[1 0];
     case "XPR3,C270,HE-025A-QUE,RUN7_CAM_NOHV(2023-02-26,DONETTI)"
         myTit="XPR3, C270mm, HE-025A-QUE scan, Run7CamNoHV (2023-02-26,Donetti)";
-        monTypes=["CAM" "DDS"];
-        MonPaths=[...
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run7CamNoHV\CarbSO2_*\"
-            "S:\Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run7CamNoHV\PRC-544-*\"
-            ];
-        myLabels=monTypes;
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR3")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STABILITY_270") & strcmpi(MeasDB.CONFIG,"SCAN_HE-025A-QUE") & ...
+                      strcmpi(MeasDB.LABEL,"CAM XPR, no HV")    );
         shifts=[1 0];
 
     % =====================================================================
@@ -266,47 +194,34 @@ switch upper(loadSettings)
     % overview of a specific data taking
     % ---------------------------------------------------------------------
     case "ISO2,CARB,PRE(2022-10-26)"
-        myTit="Steering ISO2 (2022-10-26) - Carbonio";
-        monTypes=["CAM" "DDS" "SFP"];
-        MonPaths=[...
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.10.26\CarbSO2_*\") 
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.10.26\PRC-544-*-DDSF\") 
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.10.26\PRC-544-*-SFP\") 
-            ];
-        myLabels=["CAM" "DDS" "SFP"];
+        myTit="Pre-Steering ISO2 (2022-10-26) - Carbonio";
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR2")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STEERING")      & strcmpi(MeasDB.LABEL,"pre_steering") & ...
+                      MeasDB.DATE=="26/10/2022"     );
     case "ISO2,CARB,POST(2022-11-01)"
-        myTit="Steering ISO2 (2022-11-01) - Carbonio";
-        monTypes=["CAM" "DDS" "SFP"];
-        MonPaths=[...
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.11.01\CarbSO2_*\") 
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.11.01\PRC-544-*-DDSF\") 
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.11.01\PRC-544-*-SFP\") 
-            ];
-        myLabels=["CAM" "DDS" "SFP"];
+        myTit="Post-Steering ISO2 (2022-11-01) - Carbonio";
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR2")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STEERING")      & strcmpi(MeasDB.LABEL,"post_steering") & ...
+                      MeasDB.DATE=="01/11/2022"     );
     case "ISO2,PROT,PRE(2022-10-27)"
-        myTit="Steering ISO2 (2022-10-27) - Protoni";
-        monTypes=["CAM" "DDS" "SFP"];
-        MonPaths=[...
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.10.27\ProtSO1_*\") 
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.10.27\PRC-544-*-DDSF\") 
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.10.27\PRC-544-*-SFP\") 
-            ];
-        myLabels=["CAM" "DDS" "SFP"];
+        myTit="Pre-Steering ISO2 (2022-10-27) - Protoni";
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR2")              & strcmpi(MeasDB.PARTICLE,"PROT") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STEERING")      & strcmpi(MeasDB.LABEL,"pre_steering") & ...
+                      MeasDB.DATE=="27/10/2022"     );
     case "ISO2,PROT,PRE(2022-11-01)"
-        myTit="Steering ISO2 (2022-11-01) - Protoni";
-        monTypes=["CAM" "DDS" "SFP"];
-        MonPaths=[...
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.11.01\ProtSO1_*\") 
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.11.01\PRC-544-*-DDSF\") 
-            strcat(kPath,"\Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.11.01\PRC-544-*-SFP\") 
-            ];
-        myLabels=["CAM" "DDS" "SFP"];
+        myTit="Post-Steering ISO2 (2022-11-01) - Protoni";
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR2")              & strcmpi(MeasDB.PARTICLE,"PROT") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STEERING")      & strcmpi(MeasDB.LABEL,"post_steering") & ...
+                      MeasDB.DATE=="01/11/2022"     );
 
     % ---------------------------------------------------------------------
     % specific checks
     % ---------------------------------------------------------------------
     case "ISO2,CARB,CAM"
         myTit="Steering ISO2 - Carbonio - CAMeretta";
+        caseIDs=find( strcmpi(MeasDB.LINE,"XPR2")              & strcmpi(MeasDB.PARTICLE,"CARB") & ...
+                      strcmpi(MeasDB.CYCO_SET,"STEERING")      & strcmpi(MeasDB.LABEL,"pre_steering") & ...
+                      MeasDB.DATE=="26/10/2022"     );
         monTypes="CAM";
         MonPaths=[...
             strcat(kPath,"\Area dati MD\00XPR\Recommissioning_with_beam_for_RP\2022-04-06\machine_photo_C_ISO2\CarbSO2_*\") 
@@ -529,4 +444,38 @@ switch upper(loadSettings)
     
     otherwise
         error("settings %s NOT available!",loadSettings);
+end
+
+%% generate additional arrays
+monTypes=GetMonType(MeasDB.MONITOR(caseIDs));
+MonPaths=GetFullPath(MeasDB.DISK(caseIDs),MeasDB.PATH(caseIDs));
+if (exist("myLabels","var"))
+    % append date
+    myLabels=strcat(myLabels',string(MeasDB.DATE(caseIDs)," (yyyy-MM-dd)"));
+else
+    % labels coincides with monitor types
+    myLabels=monTypes;
+end    
+
+function fullPaths=GetFullPath(disks,paths,kPath)
+    if (~exist("kPath","var")), kPath="P:\Accelerating-System\Accelerator-data"; end
+    fullPaths=strings(size(disks,1),1);
+    kIndices=startsWith(upper(disks),"K:");
+    fullPaths( kIndices)=strcat(kPath,"\",paths( kIndices));
+    fullPaths(~kIndices)=strcat(disks(~kIndices),"\",paths(~kIndices));
+end
+
+function MonTypes=GetMonType(monitors)
+    MonTypes=strings(size(monitors,1),1);
+    % - CAMeretta
+    camIndices=startsWith(upper(monitors),"CAM");
+    if (any(camIndices)), MonTypes(camIndices)="CAM"; end
+    % - DDS/NZL
+    ddsIndices=(contains(upper(monitors),"DDS") | contains(upper(monitors),"NZL"));
+    if (any(ddsIndices)), MonTypes(ddsIndices)="DDS"; end
+    % - BD
+    if (any(~camIndices & ~ddsIndices))
+        myMon=split(upper(monitors(~camIndices & ~ddsIndices)),"-");
+        MonTypes(~camIndices & ~ddsIndices)=string(myMon(:,3));
+    end
 end

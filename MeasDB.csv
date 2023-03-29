@@ -1,0 +1,82 @@
+LINE;PARTICLE;CYCO_SET;CONFIG;MONITOR;DATE;LABEL;DISK;PATH
+;;;;;;;;AMereghetti data set, with rough scans at XPR QUEs, to grossly tune focussing, measuements show problem on integral of CAMeretta
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-025A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-025A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-023A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-023A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-023A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-023A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-020A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-020A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-020A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-020A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-018A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-018A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-018A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_270mm\HE-018A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_150;SCAN_HE-025A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-025A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_150;SCAN_HE-025A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-025A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_150;SCAN_HE-023A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-023A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_150;SCAN_HE-023A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-023A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_150;SCAN_HE-020A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-020A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_150;SCAN_HE-020A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-020A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_150;SCAN_HE-018A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-018A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_150;SCAN_HE-018A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_150mm\HE-018A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_030;SCAN_HE-025A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-025A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_030;SCAN_HE-025A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-025A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_030;SCAN_HE-023A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-023A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_030;SCAN_HE-023A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-023A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_030;SCAN_HE-020A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-020A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_030;SCAN_HE-020A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-020A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_030;SCAN_HE-018A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-018A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_030;SCAN_HE-018A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\HE-018A-QUE\PRC-544-*\
+XPR3;CARB;STABILITY_030;SCAN_H2-022A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\H2-022A-QUE\CarbSO2_*\
+XPR3;CARB;STABILITY_030;SCAN_H2-022A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\H2-022A-QUE\PRC-544-*\
+;;;;;;;;MDonetti data set, debugging problem on integral of CAMeretta
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM XPR, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run1CamXPR\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM XPR, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run1CamXPR\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM XPR, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run2CamXPR\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM XPR, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run2CamXPR\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP, Rotated, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run3CamOldRev\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP, Rotated, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run3CamOldRev\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP, Rotated, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run4CamOldRev\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP, Rotated, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run4CamOldRev\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run5CamOld\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run5CamOld\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run6CamOld\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run6CamOld\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM XPR, no HV;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run7CamNoHV\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM XPR, no HV;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run7CamNoHV\PRC-544-*\
+;;;;;;;;Check cablaggi SFP in XPR
+XPR3;PROT;STABILITY_320;SCAN_HE-007A-CEB_HOR;HE-010B-QPP;05/02/2023;pre_inversione_cavi;S:;Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-007A-CEB\HE_010B_QPP\HOR\PRC-544-230205-0646\
+XPR3;PROT;STABILITY_320;SCAN_HE-007A-CEB_HOR;HE-010B-QPP;05/02/2023;post_inversione_cavi;S:;Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-007A-CEB\HE_010B_QPP\HOR\PRC-544-230205-0729\
+XPR3;PROT;STABILITY_320;SCAN_HE-007A-CEB_HOR;HE-012B-SFP;05/02/2023;pre_inversione_cavi;S:;Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-007A-CEB\HE_012B_SFP\HOR\PRC-544-230205-0742\
+XPR3;PROT;STABILITY_320;SCAN_HE-007A-CEB_HOR;HE-012B-SFP;05/02/2023;post_inversione_cavi;S:;Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-007A-CEB\HE_012B_SFP\HOR\PRC-544-230205-0747\
+XPR3;PROT;STABILITY_320;SCAN_HE-027A-CEB_HOR;HE-030B-SFP;05/02/2023;pre_inversione_cavi;S:;Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-027A-CEB\HE_030B_SFP\HOR\PRC-544-230205-0756\
+XPR3;PROT;STABILITY_320;SCAN_HE-027A-CEB_HOR;HE-030B-SFP;05/02/2023;post_inversione_cavi;S:;Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-027A-CEB\HE_030B_SFP\HOR\PRC-544-230205-0800\
+XPR3;PROT;STABILITY_320;SCAN_HE-027A-CEB_VER;HE-030B-SFP;05/02/2023;post_inversione_cavi;S:;Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-027A-CEB\HE_030B_SFP\VER\PRC-544-230205-0805\
+;;;;;;;;Steering
+XPR2;CARB;STEERING;TM;CAMeretta;26/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.10.26\CarbSO2_*\
+XPR2;CARB;STEERING;TM;DDS;26/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.10.26\PRC-544-*-DDSF\
+XPR2;CARB;STEERING;TM;HE-030B-SFP;26/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.10.26\PRC-544-*-SFP\
+XPR2;CARB;STEERING;TM;CAMeretta;01/11/2022;post_steering;K:;Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.11.01\CarbSO2_*\
+XPR2;CARB;STEERING;TM;DDS;01/11/2022;post_steering;K:;Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.11.01\PRC-544-*-DDSF\
+XPR2;CARB;STEERING;TM;HE-030B-SFP;01/11/2022;post_steering;K:;Area dati MD\00Steering\SteeringPazienti\carbonio\XPR2\2022.11.01\PRC-544-*-SFP\
+XPR2;PROT;STEERING;TM;CAMeretta;27/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.10.27\ProtSO1_*\
+XPR2;PROT;STEERING;TM;DDS;27/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.10.27\PRC-544-*-DDSF\
+XPR2;PROT;STEERING;TM;HE-030B-SFP;27/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.10.27\PRC-544-*-SFP\
+XPR2;PROT;STEERING;TM;CAMeretta;01/11/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.11.01\ProtSO1_*\
+XPR2;PROT;STEERING;TM;DDS;01/11/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.11.01\PRC-544-*-DDSF\
+XPR2;PROT;STEERING;TM;HE-030B-SFP;01/11/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\protoni\XPR2\2022.11.01\PRC-544-*-SFP\
+XPR3;CARB;STEERING;TM;CAMeretta;24/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.24\CarbSO2_*\
+XPR3;CARB;STEERING;TM;DDS;24/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.24\PRC-544-*-DDSF\
+XPR3;CARB;STEERING;TM;HE-030B-SFP;24/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\carbonio\XPR3\2022.10.24\PRC-544-*-SFP\
+XPR3;CARB;STEERING;TM;CAMeretta;09/03/2023;pre_steering;K:;scambio\MGP\steering XPR-3-Carbonio-9Mar2023\CarbSO2_LineX3_Size6_09-03-2023_0355\
+XPR3;CARB;STEERING;TM;DDS;09/03/2023;pre_steering;K:;scambio\MGP\steering XPR-3-Carbonio-9Mar2023\PRC-544-230309-0354\
+XPR3;CARB;STEERING;TM;HE-030B-SFP;09/03/2023;pre_steering;K:;scambio\MGP\steering XPR-3-Carbonio-9Mar2023\PRC-544-230309-0344\
+XPR3;PROT;STEERING;TM;CAMeretta;24/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\2022.10.24\ProtSO1_*\
+XPR3;PROT;STEERING;TM;DDS;24/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\2022.10.24\PRC-544-*-DDSF\
+XPR3;PROT;STEERING;TM;HE-030B-SFP;24/10/2022;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\2022.10.24\PRC-544-*-SFP\
+XPR3;PROT;STEERING;TM;CAMeretta;15/02/2023;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\15-02-2023\ProtSO1_*\
+XPR3;PROT;STEERING;TM;DDS;15/02/2023;pre_steering;K:;Area dati MD\00Steering\SteeringPazienti\protoni\XPR3\15-02-2023\PRC-544-*\
+XPR3;PROT;STEERING;TM;CAMeretta;10/03/2023;pre_steering;K:;scambio\MGP\steering XPR-3-Protoni-10Mar2023\ProtSO1_*\
+XPR3;PROT;STEERING;TM;DDS;10/03/2023;pre_steering;K:;scambio\MGP\steering XPR-3-Protoni-10Mar2023\PRC-544-230310-0354\
+XPR3;PROT;STEERING;TM;HE-030B-SFP;10/03/2023;pre_steering;K:;scambio\MGP\steering XPR-3-Protoni-10Mar2023\PRC-544-230310-0343\
+;;;;;;;;RP data taking for getting green light to use XPR
+XPR2;CARB;MACHINE_PHOTO;TM;CAMeretta;06/04/2022;check;K:;Area dati MD\00XPR\Recommissioning_with_beam_for_RP\2022-04-06\machine_photo_C_ISO2\CarbSO2_*\
+XPR2;PROT;MACHINE_PHOTO;TM;CAMeretta;06/04/2022;check;K:;Area dati MD\00XPR\Recommissioning_with_beam_for_RP\2022-04-06\machine_photo_P_ISO2\ProtSO1_*\
+XPR2;PROT;MACHINE_PHOTO;TM;DDS;06/04/2022;check;K:;Area dati MD\00XPR\Recommissioning_with_beam_for_RP\2022-04-06\machine_photo_P_ISO2\PRC-544-*-DDSF\
