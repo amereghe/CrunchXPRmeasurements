@@ -19,14 +19,14 @@ clear loadSettings lSkip kPath;
 % Steering XPR
 % -------------------------------------------------------------------------
 
-mySettings="ISO3,CARB(2022-10-24)";
+mySettings="ISO3,PROT,SFP";
 kPath="P:\Accelerating-System\Accelerator-data";
 
 % -------------------------------------------------------------------------
 % CheckSFPcablaggi
 % -------------------------------------------------------------------------
 
-mySettings="HE-007A-CEB,HOR,PROT,320mm";
+% mySettings="HE-007A-CEB,HOR,PROT,320mm";
 % mySettings="HE-027A-CEB,HOR+VER,PROT,320mm";
 
 % -------------------------------------------------------------------------
