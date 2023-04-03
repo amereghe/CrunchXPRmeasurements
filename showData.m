@@ -19,7 +19,7 @@ clear loadSettings lSkip kPath;
 % Steering XPR
 % -------------------------------------------------------------------------
 
-mySettings="ISO3,PROT,SFP";
+mySettings="ISO3,CARB,DDS";
 kPath="P:\Accelerating-System\Accelerator-data";
 
 % -------------------------------------------------------------------------
