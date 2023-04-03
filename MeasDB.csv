@@ -27,20 +27,20 @@ XPR3;CARB;STABILITY_030;SCAN_HE-018A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati 
 XPR3;CARB;STABILITY_030;SCAN_H2-022A-QUE;CAMeretta;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\H2-022A-QUE\CarbSO2_*\
 XPR3;CARB;STABILITY_030;SCAN_H2-022A-QUE;DDS;08/10/2022;Rough_Scan;K:;Area dati MD\00XPR\XPR3\carbonio\Fuochi\Rough_scan\C_030mm\H2-022A-QUE\PRC-544-*\
 ;;;;;;;;MDonetti data set, debugging problem on integral of CAMeretta
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM XPR, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run1CamXPR\CarbSO2_*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM XPR, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run1CamXPR\PRC-544-*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM XPR, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run2CamXPR\CarbSO2_*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM XPR, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run2CamXPR\PRC-544-*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP, Rotated, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run3CamOldRev\CarbSO2_*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP, Rotated, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run3CamOldRev\PRC-544-*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP, Rotated, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run4CamOldRev\CarbSO2_*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP, Rotated, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run4CamOldRev\PRC-544-*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run5CamOld\CarbSO2_*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP, Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run5CamOld\PRC-544-*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run6CamOld\CarbSO2_*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP, Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run6CamOld\PRC-544-*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM XPR, no HV;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run7CamNoHV\CarbSO2_*\
-XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM XPR, no HV;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run7CamNoHV\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM XPR - Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run1CamXPR\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM XPR - Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run1CamXPR\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM XPR - Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run2CamXPR\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM XPR - Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run2CamXPR\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP - Rotated - Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run3CamOldRev\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP - Rotated - Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run3CamOldRev\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP - Rotated - Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run4CamOldRev\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP - Rotated - Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run4CamOldRev\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP - Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run5CamOld\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP - Run1;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run5CamOld\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM OP - Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run6CamOld\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM OP - Run2;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run6CamOld\PRC-544-*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;CAMeretta;26/02/2023;CAM XPR - no HV;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run7CamNoHV\CarbSO2_*\
+XPR3;CARB;STABILITY_270;SCAN_HE-025A-QUE;DDS;26/02/2023;CAM XPR - no HV;S:;Area Ricerca\XPR\data\CAMeretta\2023-02-26_ProblemaIntegrale\Carbonio\HE-025A-QUE\270mm\Run7CamNoHV\PRC-544-*\
 ;;;;;;;;Check cablaggi SFP in XPR
 XPR3;PROT;STABILITY_320;SCAN_HE-007A-CEB_HOR;HE-010B-QPP;05/02/2023;pre_inversione_cavi;S:;Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-007A-CEB\HE_010B_QPP\HOR\PRC-544-230205-0646\
 XPR3;PROT;STABILITY_320;SCAN_HE-007A-CEB_HOR;HE-010B-QPP;05/02/2023;post_inversione_cavi;S:;Area Ricerca\XPR\data\SFP\2023-02-05_check_cablaggi_SFP\HE-007A-CEB\HE_010B_QPP\HOR\PRC-544-230205-0729\

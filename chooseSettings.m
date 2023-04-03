@@ -1,15 +1,12 @@
 % this is NOT the main analysis script.
 % If you wanted the main analysis script, please use showData.m
 
-% acquire DB of measurements
-MeasDB = readtable("MeasDB.csv","Delimiter",";","MissingRule","omitrow");
-
 % clear descriptors
 clear myTit caseIDs monTypes MonPaths myLabels shifts;
 
 %% switch
 
-switch upper(loadSettings)
+switch upper(myLoadSettings)
 
     % =====================================================================
 	% %%%%%%%%%%%%%%%%% MISTERY of INTEGRAL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -567,7 +564,7 @@ switch upper(loadSettings)
     % =====================================================================
     
     otherwise
-        error("settings %s NOT available!",loadSettings);
+        error("settings %s NOT available!",myLoadSettings);
 end
 
 %% generate additional arrays
@@ -581,25 +578,3 @@ else
     myLabels=monTypes;
 end    
 
-function fullPaths=GetFullPath(disks,paths,kPath)
-    if (~exist("kPath","var")), kPath="P:\Accelerating-System\Accelerator-data"; end
-    fullPaths=strings(size(disks,1),1);
-    kIndices=startsWith(upper(disks),"K:");
-    fullPaths( kIndices)=strcat(kPath,"\",paths( kIndices));
-    fullPaths(~kIndices)=strcat(disks(~kIndices),"\",paths(~kIndices));
-end
-
-function MonTypes=GetMonType(monitors)
-    MonTypes=strings(size(monitors,1),1);
-    % - CAMeretta
-    camIndices=startsWith(upper(monitors),"CAM");
-    if (any(camIndices)), MonTypes(camIndices)="CAM"; end
-    % - DDS/NZL
-    ddsIndices=(contains(upper(monitors),"DDS") | contains(upper(monitors),"NZL"));
-    if (any(ddsIndices)), MonTypes(ddsIndices)="DDS"; end
-    % - BD
-    if (any(~camIndices & ~ddsIndices))
-        myMon=split(upper(monitors(~camIndices & ~ddsIndices)),"-");
-        MonTypes(~camIndices & ~ddsIndices)=string(myMon(:,3));
-    end
-end
